@@ -44,10 +44,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\ButtonHeal.cs" />
+     <Compile Include="Assets\Script\ControleVelocidade.cs" />
+     <Compile Include="Assets\Script\Game.cs" />
      <Compile Include="Assets\Script\Grunt.cs" />
      <Compile Include="Assets\Script\MiddleHole.cs" />
+     <Compile Include="Assets\Script\Movimentacao.cs" />
      <Compile Include="Assets\Script\Stamina.cs" />
      <Compile Include="Assets\Script\Wall.cs" />
+     <Compile Include="Assets\Script\heal.cs" />
+     <Compile Include="Assets\asd.cs" />
+     <Compile Include="Assets\iTween\Plugins\iTween.cs" />
+     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
