@@ -22,7 +22,6 @@ public class Wall : MonoBehaviour {
 			float forcaTotal = forca - g.GetForca();
 			//Debug.Log(forcaTotal);
 			
-			
 			transform.Translate(-Vector3.forward * Time.deltaTime * forcaTotal/10);
 			
 			//TODO: Adicionar som das paredes se mechendo.
