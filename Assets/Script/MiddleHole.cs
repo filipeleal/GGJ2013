@@ -12,4 +12,14 @@ public class MiddleHole : MonoBehaviour {
 	void Update () {
 	
 	}
+	
+	void OnTriggerStay(Collider collision){
+	/*	foreach(var col in collision.contacts){
+			if(col.thisCollider.gameObject == gameObject)
+			{
+				col.otherCollider.gameObject.rigidbody.velocity = new Vector3();
+				col.otherCollider.gameObject.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+			}
+		}*/
+	}
 }

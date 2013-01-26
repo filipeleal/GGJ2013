@@ -4,15 +4,17 @@ using System.Collections;
 public class Wall : MonoBehaviour {
 	
 	//private float WallForce;
-	private bool move;
+	public bool move;
 	
-	private float forca = 30f;
+	public float forca;
 	
 	public string collide;
 	
 	// Use this for initialization
 	void Start () {
 		move = true;
+//		rigidbody.velocity
+		forca = Random.Range(30,30);
 	}
 	
 	// Update is called once per frame
@@ -20,11 +22,14 @@ public class Wall : MonoBehaviour {
 		if(move){
 			Grunt g = GetComponentInChildren<Grunt>();
 			float forcaTotal = forca - g.GetForca();
-			//Debug.Log(forcaTotal);
 			
-			transform.Translate(-Vector3.forward * Time.deltaTime * forcaTotal/10);
-			
+			//rigidbody.AddForce(-transform.forward * forcaTotal);
+			rigidbody.velocity = -transform.forward * forcaTotal;
 			//TODO: Adicionar som das paredes se mechendo.
+		}
+		else{
+			rigidbody.velocity = new Vector3();
+			rigidbody.constraints = RigidbodyConstraints.FreezeAll;
 		}
 	}
 	
@@ -33,10 +38,16 @@ public class Wall : MonoBehaviour {
     // Then apply the force
 		
 		foreach(var contact in collission.contacts){
-			if(contact.thisCollider.name == "Moving Wall" || contact.otherCollider.name == "Moving Wall")
+			if(contact.thisCollider.name != "MagoR" && contact.otherCollider.name != "MagoR")
 				move = false;
-			
-			collide = contact.thisCollider.name + " -> " + contact.otherCollider.name; 
+			//else{
+			//	Collider collider = contact.thisCollider.name == "Mago" ? contact.thisCollider : contact.otherCollider;
+				//GameObject controller = collider.gameObject;
+				//Vector3 point = contact.point + rigidbody.velocity;
+			//	Debug.Log(collider.gameObject.transform.position.x);
+				//controller.transform.position = point;
+			//}/
+			//collide = contact.thisCollider.name + " -> " + contact.otherCollider.name; 
 			//Debug.Log(collide);
 			//TODO: Grunt caindo
 		}

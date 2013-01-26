@@ -15,8 +15,11 @@ public class Movimentacao : MonoBehaviour {
 	public float turnSpeed = 60F;
     private Vector3 moveDirection = Vector3.zero;
 	
+	public ControllerColliderHit hit;
+	
 	public bool andando,frente,tras;
 	
+	public GameObject colisor;
 	
 	Quaternion rot;
     void Update() {
@@ -44,10 +47,12 @@ public class Movimentacao : MonoBehaviour {
             
         }
         moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
 		
-		
+		//if(colisor != null)
+		//	moveDirection += colisor.rigidbody.velocity;
+			controller.Move(moveDirection * Time.deltaTime);
 		
 	}
+	
 	
 }

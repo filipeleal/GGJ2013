@@ -16,7 +16,7 @@ public class Stamina : MonoBehaviour {
 		Grunt g = GruntObj.GetComponent<Grunt>();
 		
 		//Debug.Log(g.GetStamina());
-		
-		transform.localScale = new Vector3(g.GetStamina()/100,transform.localScale.y,transform.localScale.z);
+		if(g !=null)
+			transform.localScale = new Vector3(g.GetStamina()/100,transform.localScale.y,transform.localScale.z);
 	}
 }

@@ -1,8 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Grunt.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Movimentacao.cs">
     <Files>
-      <File FileName="Assets/Script/Grunt.cs" Line="1" Column="216" />
+      <File FileName="Assets/asd.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Movimentacao.cs" Line="43" Column="4" />
+      <File FileName="Assets/Script/MiddleHole.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/heal.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Grunt.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Wall.cs" Line="31" Column="20" />
+      <File FileName="Assets/Script/Stamina.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ControleVelocidade.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Game.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
